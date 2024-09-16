@@ -1,0 +1,11 @@
+<%- include("./partials/head") %>
+
+<body>
+    <%- include("./partials/nav") %>
+    <h1>Logg inn</h1>
+    <form class="login" action="POST">
+        <input type="text" name="brukernavn" id="brukernavn">
+        <input type="password" name="password" id="password">
+    </form>
+    <a href="/dashboard">Til dashboard</a>
+</body>
