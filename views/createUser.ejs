@@ -6,7 +6,7 @@
 
         <div class="formContainer">
         
-            <form class="login" action="" method="POST">
+            <form class="createuser" action="" method="POST">
                 <input type="text" 
                 placeholder="brukernavn" 
                 name="brukernavn" 
@@ -15,10 +15,14 @@
                 placeholder="password" 
                 name="password" 
                 id="password">
+                <input type="password" 
+                placeholder="gjenta passord" 
+                name="repeatPassword" 
+                id="repeatPassword">
                 <input type="submit" name="send" id="">
             </form>
             <!-- <button>Logg inn</button> -->
-            <a href="/createUser">Ny bruker?</a>
+            <a href="/login">Allerede bruker?</a>
             <a href="/dashboard">Til dashboard</a>
         </div>
     </div>

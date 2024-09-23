@@ -1,0 +1,68 @@
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/nav") %>
+            <h1>Ny guide</h1>
+
+
+            <form action="" method="post" id="formContainer" enctype="multipart/form-data">
+                <div class="section">
+
+                    <div>
+                        <label for="tittel">Tittel</label>
+                        <input type="text" name="tittel" id="tittel" required>
+                    </div>
+                    <div>
+                        <label for="tag">Tag</label>
+                        <input type="text" name="tag" id="tag" required>
+                    </div>
+                    <div id="addNewSection">
+                        <div name="section">
+
+                            <h2>Seksjon</h2>
+                            
+                            <div>
+                                <label for="overskrift">Overskrift</label>
+                                <input type="text" name="overskrift" id="overskrift" required>
+                            </div>
+                            <div>
+                                <label for="beskrivelse">Beskrivelse</label>
+                                <input type="text" name="beskrivelse" id="beskrivelse" required>
+                            </div>
+                            <div>
+                                <label for="bilde">Bilde</label>
+                                <input type="file" name="bilde" id="bilde" accept="image/png image/jpeg image/jpg" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button>Send inn</button>
+            </form>
+            <button onclick="lagNySeksjon()">Lag ny seksjon</button>
+            <script>
+                function lagNySeksjon() {
+                 
+                  let newSection = document.getElementById("addNewSection");
+                //   let newSection2 = document.querySelector("#addNewSection");
+                newSection.innerHTML += `
+                 <div>
+                        <h2>Seksjon</h2>
+
+                        <div>
+                            <label for="overskrift">Overskrift</label>
+                            <input type="text" name="overskrift" id="overskrift" required>
+                        </div>
+                        <div>
+                            <label for="beskrivelse">Beskrivelse</label>
+                            <input type="text" name="beskrivelse" id="beskrivelse" required>
+                        </div>
+                        <div>
+                            <label for="bilde">Bilde</label>
+                            <input type="file" name="bilde" id="bilde" required>
+                        </div>
+                    </div>
+                `
+                }
+
+            </script>
+    </body>

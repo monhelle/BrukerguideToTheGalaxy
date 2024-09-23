@@ -7,10 +7,21 @@
 
 body {
     margin: 0;
+
 }
 
+.gridContainer {
+    overflow-y: hidden;
 
-nav, ul, li, main, .guideContainers, .searchContainer, .form{
+}
+
+nav,
+ul,
+li,
+main,
+.guideContainers,
+.searchContainer,
+.form, .flexWrapper, .formContainer, form {
     display: flex;
 }
 
@@ -47,7 +58,7 @@ li {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
-} 
+}
 
 .guideContainer {
     width: 20%;
@@ -63,7 +74,7 @@ li {
 }
 
 
-.searchContainer input{
+.searchContainer input {
     width: 50%;
     margin: 100px 0px;
     height: 40px;
@@ -75,7 +86,136 @@ a {
     text-decoration: none;
 }
 
+#tittel1 {}
 
-.login {
+
+.login {}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "aside main main main main"
+    ;
+    /* min-height: 800px; */
+}
+
+.aside {
+    grid-area: aside;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15%;
+    box-shadow: 4px 0px 8px 8px rgba(0, 0, 0, 0.03);
+}
+
+.mainContainer {
+    grid-area: main;
+    /* background-color: var(--primary-color); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 10%;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scroll-behavior: smooth;
+    /*  */
+}
+
+.aside p,
+.aside a {
+    color: var(--text-white);
+
+}
+
+.aside a:first-child {
+    position: relative;
+    left: -100;
+    top: -20;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.aside a:first-child:hover {
+    background-color: var(--text-white);
+    color: var(--primary-color)
+}
+
+.aside p:hover {
+    border-bottom: 1.3px solid var(--text-white);
+}
+
+.mainContainer h1 {
+    text-align: center;
+    color: var(--text-black)
+}
+
+.mainContainer p {
+    color: var(--text-black)
+}
+
+.galaxyPlaceholder {
+    width: 30%;
+    border-radius: 2px;
+    box-shadow: 8px 8px var(--primary-color);
+    margin-bottom: 80px;
+}
+
+.infoContainer {
+    display: flex;
+}
+
+.infoContainer p {
+    padding-right: 20px;
+}
+
+form {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.flexWrapper {
+    justify-content: center;
+    align-items: center;
+}
+.formContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    /* box-shadow: 4px 4px var(--primary-color); */
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    min-height: 80vh;
+    margin-top: 50px;
+}
+
+input {
+    width: 100%;
+
+}
+@media (max-width: 660px) {
+
+    .aside {
+        padding: 15% 20px 0px 20px;
+    }
+
+
+    .galaxyPlaceholder {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .aside a:first-child {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
     
+    .formContainer {
+        width: 100%;
+    }
 }
