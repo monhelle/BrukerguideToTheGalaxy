@@ -99,7 +99,7 @@ app.post("/createuser", async (req, res) => {
     console.log("LOGGER UT HER", req.body);
     const { brukernavn, password, repeatPassword } = req.body;
     console.log(password, repeatPassword, password == repeatPassword);
-
+z
     if (password == repeatPassword) {
 
         bcrypt.hash(password, saltRounds, async function (error, hash) {
