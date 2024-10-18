@@ -17,10 +17,15 @@ jobs:
 
 
       - name: Pull latest changes
-        run: cd /var/www/helpdesk && git pull --no-edit origin main
+        run: |
+          cd /var/www/helpdesk
+          git pull --no-edit origin main
+
 
       - name: Verify pull
-        run: cd /var/www/helpdesk && git log -1 --oneline
+        run: |
+          cd /var/www/helpdesk
+          git log -1 --oneline
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
