@@ -15,8 +15,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Go to directory
-        run: cd /var/www/helpdesk
 
       - name: Pull latest changes
         run: cd /var/www/helpdesk && git pull --no-edit origin main
